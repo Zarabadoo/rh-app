@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font: 100% / 1.5 'Overpass', sansserif;
+}
+
+table {
+  border: .125rem solid #000000;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: .125rem solid #000000;
+  padding: .5rem .5rem 1rem;
+  text-align: left;
+  vertical-align: top;
+}
