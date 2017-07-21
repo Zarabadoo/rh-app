@@ -1,4 +1,15 @@
-<table>
+<div class="user-list__loading"
+  *ngIf="isLoading">
+  Hold on a tick. The users are loading up...
+</div>
+
+<div class="user-list__error"
+  *ngIf="isError">
+  Oh, my. Something is off. Don't panic... yet.
+</div>
+
+<table class="user-list__container"
+  *ngIf="isComplete && !isEmpty">
   <thead>
     <tr>
       <th>Name</th>
@@ -8,7 +19,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let user of users | async" >
+    <tr *ngFor="let user of users" >
       <td>
         {{ user.name }}
       </td>

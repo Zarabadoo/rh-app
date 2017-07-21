@@ -1,16 +1,28 @@
+// Adjust the box model to be be sane.
 * {
   box-sizing: border-box;
+
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
 }
 
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
+// Set the default font size, spacing, and family on the document.
 html {
+  color: #000000;
   font: 100% / 1.5 'Overpass', sansserif;
+  margin: 0;
+  padding: 0;
 }
 
+// Add in a bit of default padding.
+body {
+  margin: 0;
+  padding: 1rem;
+}
+
+// Set the default table styles.
 table {
   border: .125rem solid #000000;
   border-collapse: collapse;
@@ -22,4 +34,9 @@ td {
   padding: .5rem .5rem 1rem;
   text-align: left;
   vertical-align: top;
+}
+
+// Set the address element to not be italicized.
+address {
+  font-style: normal;
 }

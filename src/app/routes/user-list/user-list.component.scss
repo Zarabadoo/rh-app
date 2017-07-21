@@ -1,0 +1,5 @@
+// Make sure the table is full width to prevent a jumping display when the data
+// loads.
+.user-list__container {
+  width: 100%;
+}
