@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 // User observables instead of promises.
 import { Observable } from 'rxjs/Observable';
@@ -35,7 +36,10 @@ export class UserListComponent implements OnInit {
    * @param {UsersService} usersService
    * @memberof UserListComponent
    */
-  constructor(private usersService: UsersService) { }
+  constructor(
+    private usersService: UsersService,
+    private router: Router
+  ) { }
 
   /**
    * Initialize the class.
