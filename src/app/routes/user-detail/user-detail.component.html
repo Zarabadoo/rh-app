@@ -8,36 +8,9 @@
   Oh, my. Something is off. Don't panic... yet.
 </div>
 
-<section class="user-detail__user"
+<rh-user [user]="user"
   *ngIf="isComplete && !isEmpty">
-  <header class="user-detail__header">
-    <h1 class="user-detail__name">{{ user.name }}</h1>
-  </header>
-
-  <h2>Username</h2>
-  {{ user.username }}
-
-  <h2>Email</h2>
-  {{ user.email }}
-
-  <h2>Phone number</h2>
-  {{ user.phone }}
-
-  <h2>Website</h2>
-  <a href="http://{{ user.website }}">{{ user.website }}</a>
-
-  <h2>Address</h2>
-  <address>
-    {{ user.address.street }}<br>
-    {{ user.address.city }}<br>
-    {{ user.address.city }}, {{ user.address.zipcode }}
-  </address>
-
-  <h2>Company</h2>
-  {{ user.company.name }}<br>
-  {{ user.company.bs }}<br>
-  <q>{{ user.company.catchPhrase }}</q>
-</section>
+</rh-user>
 
 <p>
   <a [routerLink]="['/users']">Go back to the user list</a>

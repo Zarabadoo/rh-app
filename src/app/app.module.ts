@@ -10,6 +10,8 @@ import { AppComponent } from './app.component';
 import { UsersService } from './users.service';
 import { UserListComponent } from './routes/user-list/user-list.component';
 import { UserDetailComponent } from './routes/user-detail/user-detail.component';
+import { UserComponent } from './components';
+import { UserTableComponent } from './components';
 
 /**
  * The core module of the application.
@@ -21,7 +23,9 @@ import { UserDetailComponent } from './routes/user-detail/user-detail.component'
   declarations: [
     AppComponent,
     UserListComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    UserComponent,
+    UserTableComponent
   ],
   imports: [
     AppRoutingModule,

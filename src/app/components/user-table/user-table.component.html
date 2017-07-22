@@ -1,0 +1,30 @@
+<table class="user-table__container"
+  *ngIf="users">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users" >
+      <td>
+        <a [routerLink]="['/users', user.id]">{{ user.name }}</a>
+      </td>
+      <td>
+        {{ user.username }}
+      </td>
+      <td>
+        <a href="mailto:{{ user.email }}">{{ user.email }}</a>
+      </td>
+      <td>
+        <address>
+          {{ user.address.street }}<br>
+          {{ user.address.city }}, {{ user.address.zipcode }}
+        </address>
+      </td>
+    </tr>
+  </tbody>
+</table>

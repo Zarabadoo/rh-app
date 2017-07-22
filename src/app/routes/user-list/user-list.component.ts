@@ -8,6 +8,9 @@ import { Observable } from 'rxjs/Observable';
 import { UsersService } from '../../users.service';
 import { User } from '../../user';
 
+// Import the visual component.
+import { UserTableComponent } from '../../components';
+
 /**
  * Output a list of users formatted in a table.
  *
@@ -65,6 +68,17 @@ export class UserListComponent implements OnInit {
    * @memberof UserListComponent
    */
   ngOnInit(): void {
+
+    this.loadUsers();
+
+  }
+
+  /**
+   * Load user data from the server.
+   *
+   * @memberof UserListComponent
+   */
+  loadUsers() {
 
     this.userSubscription = this.usersService.getUsers()
       .subscribe(

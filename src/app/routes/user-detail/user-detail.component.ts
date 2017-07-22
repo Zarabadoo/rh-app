@@ -9,6 +9,9 @@ import { Observable } from 'rxjs/Observable';
 import { UsersService } from '../../users.service';
 import { User } from '../../user';
 
+// Import the visual component.
+import { UserComponent } from '../../components';
+
 /**
  * Define the class.
  *
@@ -66,6 +69,17 @@ export class UserDetailComponent implements OnInit {
    * @memberof UserDetailComponent
    */
   ngOnInit() {
+
+    this.loadUsers();
+
+  }
+
+  /**
+   * Load user data from the service.
+   *
+   * @memberof UserDetailComponent
+   */
+  loadUsers() {
 
     this.userSubscription = this.route.paramMap
       .switchMap((params: ParamMap) => this.usersService.getUser(+params.get('id')))
