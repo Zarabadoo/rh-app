@@ -5,7 +5,17 @@ export class RhTestPage {
     return browser.get('/');
   }
 
-  getParagraphText() {
-    return element(by.css('rh-root h1')).getText();
+  getUserTable() {
+    return element(by.css('user-table__container'));
+  }
+}
+
+export class RhTestUser {
+  navigateTo() {
+    return browser.get('/users/1');
+  }
+
+  getUser() {
+    return element(by.css('user__details'));
   }
 }
